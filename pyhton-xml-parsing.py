@@ -1,6 +1,6 @@
-#Created on Jul 24, 2013
+# Created on Jul 24, 2013
 
-#@author: tuna
+# @author: tuna
 
 '''
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,46 +40,53 @@
 </SERVERCONFIG>
 '''
 
-#XML Parsing example
+# XML Parsing example
 from xml.dom.minidom import parse, parseString
 import xml.parsers.expat
 
-#loading XML to variable
+# loading XML to variable
 XML = parse('C://config.xml')
 
 domRunTimeList = parseString('<xmlRunTime><data>hi xml</data></xmlRunTime>')
 
-#format XML runTime
-print (domRunTimeList.toprettyxml("\t", "\n", None))
+# format XML runTime
+print(domRunTimeList.toprettyxml("\t", "\n", None))
 
-print ("\n") #new line
+print("\n")  # new line
 
-print ("ENABLED SERVER LIST\n")
+print("ENABLED SERVER LIST\n")
 for node in XML.getElementsByTagName('SERVER'):
-    if node.getAttribute("ENABLED")=="Y":
-        print ("IP --> ",str(node.getElementsByTagName("IP")[0].firstChild.nodeValue) , "NAME", node.getAttribute("NAME"))
+    if node.getAttribute("ENABLED") == "Y":
+        print("IP --> ", str(node.getElementsByTagName("IP")[0].firstChild.nodeValue), "NAME",
+              node.getAttribute("NAME"))
 
-print ("\n") #new line
-print ("all IP LISTING STARTS\n")
+print("\n")  # new line
+print("all IP LISTING STARTS\n")
 for node in XML.getElementsByTagName('SERVER'):
-    print ("IP --> ",str(node.getElementsByTagName("IP")[0].firstChild.nodeValue))
+    print("IP --> ", str(node.getElementsByTagName("IP")[0].firstChild.nodeValue))
 
-print ("\n") #new line
+print("\n")  # new line
 
-#XML parsing with on the fly events
+
+# XML parsing with on the fly events
 
 # Handlers
 def start(name, attrs):
-    print ('Start Element:', name, attrs)
-def end(name):
-    print ('End Element:', name)
-def text(txt):
-    print ('Text:', str(txt))
+    print('Start Element:', name, attrs)
 
-#create a parser
+
+def end(name):
+    print('End Element:', name)
+
+
+def text(txt):
+    print('Text:', str(txt))
+
+
+# create a parser
 parser = xml.parsers.expat.ParserCreate()
 
-#map related handlers events
+# map related handlers events
 parser.StartElementHandler = start
 parser.EndElementHandler = end
 parser.CharacterDataHandler = text

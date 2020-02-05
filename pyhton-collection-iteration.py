@@ -1,8 +1,8 @@
-listIterationWithIndex = ['Test1','Goose','Bison','Pelican']
+listIterationWithIndex = ['Test1', 'Goose', 'Bison', 'Pelican']
 
-#iterate over list with index
+# iterate over list with index
 for i, withIndex in enumerate(listIterationWithIndex):
-    print ("element -- ", i , withIndex)
+    print("element -- ", i, withIndex)
 
 '''
 output
@@ -12,12 +12,12 @@ element --  2 Bison
 element --  3 Pelican
 '''
 
-tuple_ =  ('Cat','Dog','Elephant','Bird','Tiger','Lion', \
-           'Rabbit')
+tuple_ = ('Cat', 'Dog', 'Elephant', 'Bird', 'Tiger', 'Lion', \
+          'Rabbit')
 
-#iterate over tuple with index
+# iterate over tuple with index
 for i, withIndex in enumerate(tuple_):
-    print ("element -- ", i , withIndex)
+    print("element -- ", i, withIndex)
 
 '''
 output
@@ -30,11 +30,11 @@ element --  5 Lion
 element --  6 Rabbit
 '''
 
-dictionaryAnimalSpeed = {'tiger': 65, 'monkey': 25 ,'bison': 35, 'cheetah': 113 }
+dictionaryAnimalSpeed = {'tiger': 65, 'monkey': 25, 'bison': 35, 'cheetah': 113}
 
-#iterate over dictionary with index
+# iterate over dictionary with index
 for i, withIndex in enumerate(dictionaryAnimalSpeed.keys()):
-    print ("element -- ", i , withIndex)
+    print("element -- ", i, withIndex)
 
 '''
 output
@@ -42,4 +42,4 @@ element --  0 bison
 element --  1 cheetah
 element --  2 monkey
 element --  3 tiger
-'''   
+'''

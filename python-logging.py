@@ -6,12 +6,12 @@ Created on Jul 24, 2013
 
 '''
 
-#python logging example
+# python logging example
 
 import logging
 
-#logging.basicConfig(level=logging.DEBUG)
-logging.basicConfig(filename='/tmp/test.log',level=logging.ERROR)
+# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(filename='/tmp/test.log', level=logging.ERROR)
 logging.debug('Debug log')
 logging.info('Info log')
 logging.warning('Warning log')
