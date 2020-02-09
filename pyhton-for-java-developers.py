@@ -1,3 +1,5 @@
+from operator import xor
+
 message = "test"
 message1 = 'test2'
 
@@ -74,14 +76,14 @@ C.append("6")  # list.add()
 print("C: ", C)
 
 print("C[0]: ", C[0])  # list.get(i)
-print("C[4]: ", C[4])   # list.size()
+print("C[4]: ", C[4])  # list.size()
 print("len(C)", len(C))
 
 D = C[:]  # every element in C list.clone()
 print("D:", D)
 
-#tuple
-#immutable
+# tuple
+# immutable
 
 tupleA = ()
 tupleB = (1, 2, 3, 4, 5, 6)
@@ -91,7 +93,7 @@ tupleD = (1, 2, tupleB, tupleC)
 print("tupleD: ", tupleD)
 print("tupleD[2]", tupleD[2])
 
-#dictionary
+# dictionary
 # key - value pairs
 
 people = {'john': 123, "tom": 123}
@@ -100,3 +102,93 @@ print("john in people: ", 'john' in people)
 people['john'] = 321
 print(people['john'])
 print(people.keys())
+
+my_dict = {1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6'}
+print("my_dict: ", my_dict)
+print("len(my_dict): ", len(my_dict))
+my_dict.pop(5)
+print("my_dict: pop(5)", my_dict)
+print("len(my_dict): ", len(my_dict))
+my_dict.clear()
+print("len(my_dict): ", len(my_dict))
+
+print("xor 1 1:", xor(1, 1))
+print("xor 1 0:", xor(1, 0))
+print("xor 0 1:", xor(0, 1))
+print("xor 0 0:", xor(0, 0))
+
+# if
+var1 = 100
+if 100 == var1:
+    print("var1 == 100")
+
+# if else
+var1 = 250
+if 200 == var1:
+    print("var1 == 200")
+else:
+    print("var1 != 200")
+
+# if elif else
+var1 = 250
+if 200 == var1:
+    print("var1 == 200")
+elif 250 == var1:
+    print("var1 == 250")
+else:
+    print("else value")
+
+# multiple conditions
+test1 = True
+test2 = False
+
+if test1 is False and test2 is True:
+    print("Both conditions is True")
+
+test1 = "test1"
+test2 = "test2"
+
+if test1 == "test1" and test2 == "test2":
+    print("Both conditions == True")
+
+#for loop
+for i in range(0, 5):
+    print("loop:", i)
+
+# increased by 2
+for j in range(0, 20, 2):
+    print("loop: " + str(j))
+
+# decreased by 1
+for i in range(10, 0, -1):
+    print("loop: " + str(i))
+
+# for with break
+for i in range(10, 0, -1):
+    if i == 5:
+        break
+    print("loop: " + str(i))
+
+# while
+var = 1
+while var < 10:
+    var = var * 2
+    print("var: ", var)
+
+#iterate a list
+values = ['1', '2', '3']
+for value in values:
+    print("value", value)
+
+#iterate a tuple
+values = ('1', '2', '3')
+for value in values:
+    print("value (tuple)", value)
+
+#iterate a dictionary
+values = {'value': '123456', 'value1': '123456'}
+for key in values:
+    print("value (dictionary)", values[key])
+
+for key, value in values.items():
+    print("key", key, "value (dictionary)", value)
