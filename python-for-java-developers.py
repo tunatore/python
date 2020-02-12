@@ -151,7 +151,7 @@ test2 = "test2"
 if test1 == "test1" and test2 == "test2":
     print("Both conditions == True")
 
-#for loop
+# for loop
 for i in range(0, 5):
     print("loop:", i)
 
@@ -175,20 +175,32 @@ while var < 10:
     var = var * 2
     print("var: ", var)
 
-#iterate a list
+# iterate a list
 values = ['1', '2', '3']
 for value in values:
     print("value", value)
 
-#iterate a tuple
+# iterate a tuple
 values = ('1', '2', '3')
 for value in values:
     print("value (tuple)", value)
 
-#iterate a dictionary
+# iterate a dictionary
 values = {'value': '123456', 'value1': '123456'}
 for key in values:
     print("value (dictionary)", values[key])
 
 for key, value in values.items():
     print("key", key, "value (dictionary)", value)
+
+# list as stack
+stack = [1]
+stack.append(2)
+print("list as stack:", stack.pop())  # pop 2
+
+# set
+set1 = {1, 1, 2, 2, 3, 3, 4, 5}
+print(set1)
+
+set2 = set([1, 1, 2, 2, 3, 3, 4, 5])
+print(set2)

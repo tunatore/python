@@ -9,12 +9,9 @@ def interpolation_search(arr, item):
     high_end = len(arr) - 1
 
     while low_end <= high_end and item >= arr[low_end] and item <= arr[high_end]:
-
         probe = math.floor(low_end + (((high_end - low_end) * (item - arr[low_end])) / (arr[high_end] - arr[low_end])))
-
         if arr[probe] == item:
             return probe
-
         if item > arr[probe]:
             low_end = probe + 1
         else:
