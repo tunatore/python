@@ -19,7 +19,7 @@ class Hello():
 print(Hello.f())
 
 
-class HelloInstance():
+class HelloInstance:
     def f(self):
         return "Hello from Instance"
 
