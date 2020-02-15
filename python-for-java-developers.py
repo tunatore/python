@@ -204,3 +204,14 @@ print(set1)
 
 set2 = set([1, 1, 2, 2, 3, 3, 4, 5])
 print(set2)
+
+# for loop with index
+list1 = [1, 2, 3, 4, 5]
+for i in range(1, len(list1) + 1):
+    print(list1[i - 1], end="")
+
+print()
+
+# for loop with index reverse
+for i in range(len(list1)-1, -1, -1):
+    print(list1[i], end="")

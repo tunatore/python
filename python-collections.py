@@ -82,3 +82,20 @@ print("\nordered dictionary")
 orderedDictionary = collections.OrderedDict(sorted(dictionaryAnimalSpeed.items()))
 for key, value in orderedDictionary.items():
     print(key, value)
+
+# deque python
+
+from collections import deque
+
+q = deque([1, 2, 3, 4, 5, 6])
+
+q.append(7)
+q.append(8)
+
+print("\ndeque:", q)
+
+print("deque pop", q.pop())
+print("deque popleft", q.popleft())
+
+print("\ndeque:", q)
+

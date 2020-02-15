@@ -24,5 +24,25 @@ print(list)
 
 print(list.index(10))
 
-list += [1,2,3,4,5,6]
-print(list)
+list += [1, 2, 3, 4, 5, 6]
+print("list", list)
+
+# first element
+print("first element:", list[0])
+print("remainder of the list:", list[1:])
+
+# list last element
+print("list last element:", list[-1])
+
+# first 2 elements
+print("first 2 elements:", list[:2])
+
+# last 2 elements
+print("last 2 elements:", list[-2:])
+
+# list insert element
+print(list[:2] + [222] + list[-10:])
+
+# char list
+text = 'test'
+print(text[0])
