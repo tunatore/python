@@ -55,3 +55,24 @@ for name in nameList:
 # True
 # True
 # False
+
+# lambda filter
+
+# syntax lambda x : True if (condition) else False
+test_lambda = lambda x: True if (0 < x < 100) else False
+
+print("test_lambda(90)", test_lambda(90))
+
+test_lambda1 = lambda x: (0 < x < 100)
+
+print("lambda x: (0 < x < 100)", test_lambda1(90))
+
+list_nums = [1, 2, 3, 4, 5, 6, 7, 8, 90, 100, 200, 300, 400, 500]
+print(list(filter(test_lambda, list_nums)))
+
+# lambda if else
+
+test_lambda2 = lambda x: x + 1 if x < 100 else (x + 2 if x < 200 else x + 1)
+
+for x in list_nums:
+    print(test_lambda2(x), end=' ')
