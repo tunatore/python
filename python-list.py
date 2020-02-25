@@ -46,3 +46,16 @@ print(list[:2] + [222] + list[-10:])
 # char list
 text = 'test'
 print(text[0])
+
+print(list)
+print("list.index(2):" , list.index(2))
+
+print([list] * 2)
+
+# list comprehension
+square_list = [x * x for x in range(1, 5)]
+print(square_list)
+
+# list comprehension with condition
+square_list_condition = [x * x for x in range(1,5) if x != 2 and x != 1]
+print(square_list_condition)

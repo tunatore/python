@@ -47,3 +47,6 @@ print("int_array[0:5]", int_array[0:5])
 print("int_array[:-5]", int_array[:-5])
 print("int_array[5:]", int_array[5:])
 print("int_array[-1]", int_array[-1])
+
+# reverse array
+print(int_array[::-1])

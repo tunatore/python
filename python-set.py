@@ -33,8 +33,15 @@ print("difference_sets", difference_sets)
 set1 = {1, 2, 3}
 set2 = {1, 2, 3}
 set3 = {1, 2}
+set4 = {4, 5}
 
 #compare sets
 print(set1 == set2)
 print(set2 == set3)
 print(set2 >= set3)
+
+
+print("set3.issubset(set1),", set3.issubset(set1))
+print("set3.intersection(set1),", set3.intersection(set1))
+print("set3.union(set1),", set3.union(set4))
+print("set1.difference(set3),", set1.difference(set3))
