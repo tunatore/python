@@ -48,7 +48,7 @@ text = 'test'
 print(text[0])
 
 print(list)
-print("list.index(2):" , list.index(2))
+print("list.index(2):", list.index(2))
 
 print([list] * 2)
 
@@ -57,5 +57,17 @@ square_list = [x * x for x in range(1, 5)]
 print(square_list)
 
 # list comprehension with condition
-square_list_condition = [x * x for x in range(1,5) if x != 2 and x != 1]
+square_list_condition = [x * x for x in range(1, 5) if x != 2 and x != 1]
 print(square_list_condition)
+
+print([1, 2, 3, 2, 4, 5, 6].count(2))
+
+# list comprehension
+# [expression for item in iterable]
+# [expression for item in iterable if condition]
+
+a = [y for y in range(1, 10) if y % 2 == 0]
+print(a)
+
+b = [i * 2 for i in range(1, 10)]
+print(b)
