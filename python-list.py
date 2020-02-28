@@ -20,7 +20,8 @@ print(pop)
 print(list)
 
 list.reverse()
-print(list)
+print("list.reverse()", list)
+print("reversed(list)", list)
 
 print(list.index(10))
 
@@ -71,3 +72,25 @@ print(a)
 
 b = [i * 2 for i in range(1, 10)]
 print(b)
+
+list = ["test1", "test2", "test3"]
+
+for item in enumerate(list):
+    print(item)
+
+for index, item in enumerate(list):
+    print("index:", index, "item:", item)
+
+for index, item in enumerate(list, 100):
+    print("index:", index, "item:", item)
+
+iterator = iter(list)
+i = 0
+while i < len(list):
+    i += 1
+    print("iterator", next(iterator))
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 10]
+list1.extend(list2)
+print(list1)

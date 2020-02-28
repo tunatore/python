@@ -4,10 +4,12 @@ Created on Jul 31, 2013
 @author: tuna
 '''
 
-
 # lambdas are similar to functions in python with simple syntax
 # do define a increment lambda
 # first function example below
+from functools import reduce
+
+
 def addNumbers(x, y):
     return x + y
 
@@ -76,3 +78,20 @@ test_lambda2 = lambda x: x + 1 if x < 100 else (x + 2 if x < 200 else x + 1)
 
 for x in list_nums:
     print(test_lambda2(x), end=' ')
+
+# set filter
+
+s = set(filter(lambda x: x > 5, range(100)))
+print("'\ns", sorted(s))
+
+s1 = set(map(lambda x: x * 5, range(10)))
+print("s1", sorted(s1))
+
+# reduce to single element
+
+r = reduce(lambda x, y: y - x, [1, 2, 3, 4, 5])
+# 2-1
+# 3-1
+# 4-2
+# 5-2
+print(r)

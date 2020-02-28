@@ -19,3 +19,23 @@ print("values", my_dict_str.values())
 print("items", my_dict_str.items())
 print("get(key)", my_dict_str.get('tuna'))
 print("get(key,alt)", my_dict_str.get('key', 'otherwise'))
+
+# iterate a dictionary
+values = {'value': '123456', 'value1': '123456'}
+for key in values:
+    print("value (dictionary)", values[key])
+
+for key, value in values.items():
+    print("key", key, "value (dictionary)", value)
+
+for key in values.keys():
+    print("key", key)
+
+for value in values.values():
+    print("value", value)
+
+for key in sorted(values.keys()):
+    print("key", key)
+
+for key in reversed(values.keys()):
+    print("key", key)

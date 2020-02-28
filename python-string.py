@@ -67,3 +67,15 @@ print("text1".count("t", 0, -1))
 print("text1".replace("t", "r", 1))
 print("text1".replace("t", "r", 2))
 
+# chr
+print(chr(76))
+print(ord('K'))
+
+# is alphanumeric
+print("abc123".isalnum())
+print("abc123!".isalnum())
+print("123".isdigit())
+print("123".isnumeric())
+print("8".isdigit())
+
+print(max("abcd12912zopwe"))

@@ -185,14 +185,6 @@ values = ('1', '2', '3')
 for value in values:
     print("value (tuple)", value)
 
-# iterate a dictionary
-values = {'value': '123456', 'value1': '123456'}
-for key in values:
-    print("value (dictionary)", values[key])
-
-for key, value in values.items():
-    print("key", key, "value (dictionary)", value)
-
 # list as stack
 stack = [1]
 stack.append(2)
