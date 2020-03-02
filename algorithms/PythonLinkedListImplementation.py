@@ -46,5 +46,3 @@ print()
 l.next(7)
 l.next(8)
 l.values()
-
-
