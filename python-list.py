@@ -94,3 +94,23 @@ list1 = [1, 2, 3, 4, 5]
 list2 = [6, 7, 8, 9, 10]
 list1.extend(list2)
 print(list1)
+
+# list initialize
+list_values = [None] * 10
+print(list_values)
+
+# list sort
+list = ["A", "b", "E", "d", "a", "b"]
+print(sorted(list, key=lambda x: x.lower()))
+print(sorted(list, reverse=True))
+
+# bisect
+
+from bisect import bisect
+
+list = [-3, -2, - 1, 0, 1, 2, 3, 4, 5, 6, 7]
+# binary search
+print(bisect(list, 6))
+
+list = ["A", "b", "E", "d", "a", "b"]
+print("".join(list))

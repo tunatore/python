@@ -95,3 +95,22 @@ r = reduce(lambda x, y: y - x, [1, 2, 3, 4, 5])
 # 4-2
 # 5-2
 print(r)
+
+
+def f(x): return x % 2 == 0
+
+
+def square(x): return x * x
+
+
+print("f(20):", f(20))
+print("square:", square(3))
+
+# map
+print(list(map(square, range(0, 3))))
+
+# filter
+print(list(filter(f, range(0, 10))))
+
+
+
