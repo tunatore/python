@@ -1,11 +1,11 @@
+from collections import deque
+
+
 class Node:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
-
-
-from collections import deque
 
 
 class BinarySearchTree:
@@ -121,6 +121,15 @@ class BinarySearchTree:
         if root.right is not None:
             self.print_depth_first_recursive(root.right)
 
+    def depth_of_tree(self, root):  # height of binary search tree
+        if root is None:
+            return -1
+
+        left_height = self.depth_of_tree(root.left)
+        right_height = self.depth_of_tree(root.right)
+
+        return 1 + max(left_height, right_height)
+
 
 b = BinarySearchTree()
 b.insert(10)
@@ -151,3 +160,4 @@ print("\ndepth first search:")
 b.print_depth_first(b.root)
 print("\ndepth first search - recursive:")
 b.print_depth_first_recursive(b.root)
+print("\ndepth of tree:", b.depth_of_tree(b.root))

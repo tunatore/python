@@ -207,3 +207,7 @@ print()
 # for loop with index reverse
 for i in range(len(list1)-1, -1, -1):
     print(list1[i], end="")
+
+print()
+test = [[0 for x in range(10)]]
+print(test)
