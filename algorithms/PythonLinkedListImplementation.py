@@ -21,6 +21,16 @@ class LinkedList:
                 print(node.get_data(), "->", end="")
                 node = node.next
 
+    def reverse(self):
+        previous = None
+        current = self.head
+        while current:
+            next = current.next
+            current.next = previous
+            previous = current
+            current = next
+        self.head = previous
+
 
 class ListNode:
 
@@ -45,4 +55,7 @@ l.values()
 print()
 l.next(7)
 l.next(8)
+l.values()
+print()
+l.reverse()
 l.values()
