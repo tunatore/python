@@ -27,6 +27,35 @@ class BinarySearchTree:
                 else:
                     self.insert_node(node_root.right, val)
 
+    def delete_node(self, node_root, val):
+        if node_root is None or val is None:
+            return node_root
+
+        if val < node_root.val:
+            node_root.left = self.delete_node(node_root.left, val)
+        elif val > node_root.val:
+            node_root.right = self.delete_node(node_root.right, val)
+        else:
+            if node_root.left is None:
+                temp = node_root.right
+                node_root = None
+                return temp
+            elif node_root.right is None:
+                temp = node_root.left
+                node_root = None
+                return temp
+            else:
+                temp = self.find_min_node(node_root.right)
+                node_root.val = temp.val
+                node_root.right = self.delete_node(node_root.right, temp.val)
+        return node_root
+
+    def find_min_node(self, node):
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
+
     def insert(self, val):
         self.insert_node(self.root, val)
 
@@ -67,6 +96,14 @@ class BinarySearchTree:
         if node_root.right is not None:
             self.print_post_order(node_root.right)
         print(node_root.val, end="->")
+
+    def print_leaf_nodes(self, node_root):
+        if node_root.left:
+            self.print_leaf_nodes(node_root.left)
+        if node_root.right:
+            self.print_leaf_nodes(node_root.right)
+        if node_root.left is None and node_root.right is None:
+            print(node_root.val, end="->")
 
     def print_breadth_first_search(self, root):
         if root is None:
@@ -161,3 +198,8 @@ b.print_depth_first(b.root)
 print("\ndepth first search - recursive:")
 b.print_depth_first_recursive(b.root)
 print("\ndepth of tree:", b.depth_of_tree(b.root))
+print("print leaf nodes:")
+b.print_leaf_nodes(b.root)
+b.delete_node(b.root, 10)
+print("\nin order:")
+b.print_in_order(b.root)

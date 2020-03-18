@@ -114,3 +114,11 @@ print(bisect(list, 6))
 
 list = ["A", "b", "E", "d", "a", "b"]
 print("".join(list))
+
+#rotate array
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
+n = 2
+print(arr[n:] + arr[0:n])
+
+n = 3
+print(arr[n:] + arr[0:n])

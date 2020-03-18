@@ -39,3 +39,17 @@ for key in sorted(values.keys()):
 
 for key in reversed(values.keys()):
     print("key", key)
+
+import collections
+
+# keep the insertion order in Dictionary
+orderedDictionary = collections.OrderedDict()
+orderedDictionary[0] = 0
+orderedDictionary[1] = 1
+orderedDictionary[2] = 2
+orderedDictionary[3] = 3
+orderedDictionary[4] = 4
+orderedDictionary[5] = 5
+for i in orderedDictionary.keys():
+    print(i, end="->")
+
