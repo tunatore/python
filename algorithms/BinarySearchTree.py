@@ -167,6 +167,16 @@ class BinarySearchTree:
 
         return 1 + max(left_height, right_height)
 
+    def sum_of_tree(self, root):
+
+        if root is None:
+            return 0
+
+        left_sum = self.sum_of_tree(root.left)
+        right_sum = self.sum_of_tree(root.right)
+
+        return root.val + left_sum + right_sum
+
 
 b = BinarySearchTree()
 b.insert(10)
@@ -176,6 +186,8 @@ b.insert(6)
 b.insert(18)
 b.insert(16)
 b.insert(25)
+
+print("\nsum", b.sum_of_tree(b.root))
 
 print("find 6:", b.find(6))
 print("find 10:", b.find(10))
@@ -203,3 +215,4 @@ b.print_leaf_nodes(b.root)
 b.delete_node(b.root, 10)
 print("\nin order:")
 b.print_in_order(b.root)
+
