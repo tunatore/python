@@ -53,6 +53,11 @@ print("list.index(2):", list.index(2))
 
 print([list] * 2)
 
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list)
+list[0:4] = [6, 2, 5, 6]
+print(list)
+
 # list comprehension
 square_list = [x * x for x in range(1, 5)]
 print(square_list)
@@ -115,7 +120,7 @@ print(bisect(list, 6))
 list = ["A", "b", "E", "d", "a", "b"]
 print("".join(list))
 
-#rotate array
+# rotate array
 arr = [1, 2, 3, 4, 5, 6, 7, 8]
 n = 2
 print(arr[n:] + arr[0:n])
