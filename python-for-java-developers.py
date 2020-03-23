@@ -233,3 +233,14 @@ for char, count in c.most_common(2):
 print(c.items())
 print(c.keys())
 print(c.values())
+
+# all method
+list = [2, 2, 2, 2, 2]
+print(all([val == 2 for val in list]))
+
+dict = {}
+dict["a"] = 0
+dict["b"] = 0
+dict["c"] = 0
+print(dict)
+print(all([val == 0 for val in dict.values()]))
