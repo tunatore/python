@@ -205,9 +205,31 @@ for i in range(1, len(list1) + 1):
 print()
 
 # for loop with index reverse
-for i in range(len(list1)-1, -1, -1):
+for i in range(len(list1) - 1, -1, -1):
     print(list1[i], end="")
 
 print()
 test = [[0 for x in range(10)]]
 print(test)
+
+# python counter
+import collections
+
+c = collections.Counter(["a", "a", "a", "a", "a", "b", "c"])
+print(c)
+c.update("aaaaaaaaaabbbbccc")
+print(c)
+
+for char in "abc":
+    print((char, c[char]))
+
+# counter elements
+print(list(c.elements()))
+
+# counter most common
+for char, count in c.most_common(2):
+    print("%s: %d" % (char, count))
+
+print(c.items())
+print(c.keys())
+print(c.values())
