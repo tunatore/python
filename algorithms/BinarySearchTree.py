@@ -167,6 +167,30 @@ class BinarySearchTree:
 
         return 1 + max(left_height, right_height)
 
+    def size_of_tree(self, root):  # elements in the binary search tree
+
+        size_of_tree = 0
+        if root is None:
+            return size_of_tree
+
+        node_stack = [root]
+        size_of_tree += 1
+        while node_stack:
+            node = node_stack.pop()
+            if node.right is not None:
+                size_of_tree += 1
+                node_stack.append(node.right)
+            if node.left is not None:
+                size_of_tree += 1
+                node_stack.append(node.left)
+        return size_of_tree
+
+    def size_of_tree_recursive(self, root):
+        if root is None:
+            return 0
+
+        return 1 + self.size_of_tree_recursive(root.left) + self.size_of_tree_recursive(root.right)
+
     def sum_of_tree(self, root):
 
         if root is None:
@@ -187,7 +211,10 @@ b.insert(18)
 b.insert(16)
 b.insert(25)
 
-print("\nsum", b.sum_of_tree(b.root))
+print("\nsum:", b.sum_of_tree(b.root))
+print("size of tree:")
+print(b.size_of_tree(b.root))
+print(b.size_of_tree_recursive(b.root))
 
 print("find 6:", b.find(6))
 print("find 10:", b.find(10))
@@ -215,4 +242,6 @@ b.print_leaf_nodes(b.root)
 b.delete_node(b.root, 10)
 print("\nin order:")
 b.print_in_order(b.root)
-
+print("\nsize of tree:")
+print(b.size_of_tree(b.root))
+print(b.size_of_tree_recursive(b.root))

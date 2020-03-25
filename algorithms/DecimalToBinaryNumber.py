@@ -12,6 +12,21 @@ def decimal_to_binary_number(decimal_number):
     return binary_string
 
 
+def decimal_to_binary_number2(decimal_number):
+    from collections import deque
+    result = []
+    q = deque()
+    q.append(1)
+
+    for index in range(decimal_number):
+        result.append(q.popleft())
+        binary_str1 = str(result[index]) + "0"
+        binary_str2 = str(result[index]) + "1"
+        q.append(binary_str1)
+        q.append(binary_str2)
+    return result
+
+
 def binary_to_decimal(binary_number):
     number = 0
     for i in range(0, len(binary_number)):
@@ -34,3 +49,5 @@ print("110:", binary_to_decimal("110"))
 print("1000:", binary_to_decimal("1000"))
 print("1010:", binary_to_decimal("1010"))
 print("10111011100:", binary_to_decimal("10111011100"))
+
+print(decimal_to_binary_number2(6))

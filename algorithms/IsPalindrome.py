@@ -1,5 +1,17 @@
-def isPalindrome1(str):
-    return str == str[::-1]
+import re # regular expressions
+
+
+def isPalindrome1(self, s):
+    """
+    :type s: str
+    :rtype: bool
+    """
+    if s is None:
+        return True
+
+    s = s.lower()
+    str_replaced = re.sub('[^0-9a-z]+', '', s)
+    return str_replaced == str_replaced[::-1]
 
 
 def isPalindrome2(str):
@@ -16,3 +28,4 @@ print(isPalindrome2("yes"))
 print(isPalindrome2("test"))
 print(isPalindrome2(""))
 print(isPalindrome2("123456"))
+print(isPalindrome1("A man, a plan, a canal: Panama"))

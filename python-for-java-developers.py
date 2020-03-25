@@ -244,3 +244,8 @@ dict["b"] = 0
 dict["c"] = 0
 print(dict)
 print(all([val == 0 for val in dict.values()]))
+
+from itertools import chain
+
+list = [[10, 20, 30], [1, 2, 3], [0, 1], [100, 200, 300]]
+print(sorted(chain(*list)))
