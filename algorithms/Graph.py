@@ -1,7 +1,6 @@
 class Graph:
 
     def __init__(self, graph_dictionary=None):
-
         if graph_dictionary is None:
             self.graph_dict = {}
         else:
@@ -38,6 +37,37 @@ class Graph:
                     self.graph_dict[vertex1].append(vertex2)
                     self.graph_dict[vertex2] = [vertex1]
 
+    def depth_first_search(self, start):
+        visited = set()
+        nodes_stack = [start]
+        while nodes_stack:
+            vertex = nodes_stack.pop()
+            if vertex not in visited:
+                visited.add(vertex)
+                nodes_stack.extend(set(self.graph_dict[vertex]) - visited)
+        return visited
+
+    def depth_first_search_recursive(self, vertex, visited=None):
+
+        if visited is None:
+            visited = set()
+
+        visited.add(vertex)
+        node_set = set(self.graph_dict[vertex]) - visited
+        for next in node_set:
+            self.depth_first_search_recursive(next, visited)
+        return visited
+
+    def breadth_first_search(self, start):
+        visited = []
+        queue = [start]
+        while queue:
+            vertex = queue.pop(0)
+            if vertex not in visited:
+                visited.append(vertex)
+                queue.extend(set(self.graph_dict[vertex]) - set(visited))
+        return list(visited)
+
 
 graph_adjacency_list = {
     "a": ["b", "e", "d"],
@@ -67,3 +97,18 @@ print("graph add an edge with new vertices")
 graph.add_edge(("p", "r"))
 print(graph.vertices())
 print(graph.edges())
+
+print("depth first search a")
+print(graph.depth_first_search("a"))
+
+print("depth first search b")
+print(graph.depth_first_search("b"))
+
+print("depth first search e")
+print(graph.depth_first_search("e"))
+
+print("depth first search recursive e")
+print(graph.depth_first_search_recursive("e"))
+
+print("breadth first search a")
+print(graph.breadth_first_search("a"))
