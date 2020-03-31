@@ -88,14 +88,22 @@ for key, value in orderedDictionary.items():
 from collections import deque
 
 q = deque([1, 2, 3, 4, 5, 6])
-
 q.append(7)
 q.append(8)
 
 print("\ndeque:", q)
-
 print("deque pop", q.pop())
 print("deque popleft", q.popleft())
-
 print("\ndeque:", q)
 
+
+from queue import PriorityQueue
+priority_queue = PriorityQueue()
+priority_queue.put((5, "E"))
+priority_queue.put((2, "B"))
+priority_queue.put((3, "C"))
+priority_queue.put((4, "D"))
+priority_queue.put((1, "A"))
+
+while not priority_queue.empty():
+    print(priority_queue.get())
