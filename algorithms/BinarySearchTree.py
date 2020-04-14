@@ -168,7 +168,6 @@ class BinarySearchTree:
         return 1 + max(left_height, right_height)
 
     def size_of_tree(self, root):  # elements in the binary search tree
-
         size_of_tree = 0
         if root is None:
             return size_of_tree
@@ -192,13 +191,11 @@ class BinarySearchTree:
         return 1 + self.size_of_tree_recursive(root.left) + self.size_of_tree_recursive(root.right)
 
     def sum_of_tree(self, root):
-
         if root is None:
             return 0
 
         left_sum = self.sum_of_tree(root.left)
         right_sum = self.sum_of_tree(root.right)
-
         return root.val + left_sum + right_sum
 
 
