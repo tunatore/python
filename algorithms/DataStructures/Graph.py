@@ -68,6 +68,8 @@ class Graph:
                 queue.extend(set(self.graph_dict[vertex]) - set(visited))
         return list(visited)
 
+#  undirected graph
+
 
 graph_adjacency_list = {
     "a": ["b", "e", "d"],
