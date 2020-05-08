@@ -5,9 +5,9 @@ message1 = 'test2'
 
 print("message: ", message)
 print("message1: ", message1)
-print("test3");
-print("test4");
-print("test5", end='');
+print("test3")
+print("test4")
+print("test5", end='')
 print("test6")  # no new line
 
 value = 0
@@ -39,7 +39,7 @@ print(strForReplace.replace("replace", ""))  # replace()
 print(str(number) + string)  # str()
 
 strForTrim = "     test       "
-print(strForTrim.lstrip().rstrip(), end='');
+print(strForTrim.lstrip().rstrip(), end='')
 print("addition")  # trim()
 
 boolean = None

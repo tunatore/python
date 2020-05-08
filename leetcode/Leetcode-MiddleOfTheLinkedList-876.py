@@ -16,8 +16,8 @@ class Solution(object):
         if head.next is None:
             return head
 
-        slow = head;
-        fast = head.next;
+        slow = head
+        fast = head.next
 
         while fast is not None:
             slow = slow.next

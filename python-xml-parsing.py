@@ -91,4 +91,4 @@ parser.StartElementHandler = start
 parser.EndElementHandler = end
 parser.CharacterDataHandler = text
 
-parser.Parse("<xmlRunTime><data att='this is attribute1' att2='This is attribute 2'>hi xml</data></xmlRunTime>");
+parser.Parse("<xmlRunTime><data att='this is attribute1' att2='This is attribute 2'>hi xml</data></xmlRunTime>")

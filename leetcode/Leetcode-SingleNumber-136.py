@@ -13,5 +13,3 @@ class Solution(object):
             else:
                 del d[i]
         return list(d.values())[0]
-
-                

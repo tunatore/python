@@ -2,9 +2,9 @@
 
 # @author: tunatore
 
-import time;
-import calendar;
-from datetime import date;
+import time
+import calendar
+from datetime import date
 
 currenTimeTuple = time.localtime(time.time())
 print("current timeTuple :", currenTimeTuple)

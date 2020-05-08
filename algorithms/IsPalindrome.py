@@ -1,11 +1,8 @@
 import re # regular expressions
 
 
-def isPalindrome1(self, s):
-    """
-    :type s: str
-    :rtype: bool
-    """
+def isPalindrome1(s):
+
     if s is None:
         return True
 

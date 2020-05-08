@@ -6,7 +6,7 @@ class Solution(object):
         """
 
         s.strip()
-        split = s.split(' ');
+        split = s.split(' ')
 
         reverse = ""
         for i in range(len(split) - 1, -1, -1):
